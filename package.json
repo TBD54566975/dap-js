@@ -2,10 +2,12 @@
   "name": "dap-js",
   "version": "0.0.1",
   "description": "TypeScript SDK for DAPs",
-  "module": "src/index.ts",
+  "module": "dist/index.js",
+  "types": "dist/index.d.ts",
   "type": "module",
   "scripts": {
-    "build": "bun run build.ts"
+    "build": "bun run build.ts && bun run build:types",
+    "build:types": "tsc --project tsconfig.types.json"
   },
   "homepage": "https://github.com/TBD54566975/dap-js",
   "bugs": "https://github.com/TBD54566975/dap-js/issues",
@@ -14,11 +16,21 @@
     "url": "git+https://github.com/TBD54566975/dap-js.git"
   },
   "license": "Apache-2.0",
-  "devDependencies": {
-    "@tsconfig/bun": "^1.0.6",
-    "@types/bun": "latest"
+  "keywords": [
+    "DAP",
+    "decentralized-identity",
+    "paytags"
+  ],
+  "publishConfig": {
+    "access": "public",
+    "provenance": true
   },
-  "peerDependencies": {
-    "typescript": "^5.0.0"
+  "engines": {
+    "node": ">=20.0.0"
+  },
+  "devDependencies": {
+    "@tsconfig/bun": "1.0.6",
+    "@types/bun": "latest",
+    "typescript": "5.5.2"
   }
 }
