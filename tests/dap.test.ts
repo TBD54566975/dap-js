@@ -1,4 +1,5 @@
-import { expect, test, describe } from "bun:test";
+import { expect, test, describe } from 'bun:test';
+
 import { Dap, InvalidDap } from '../src/dap';
 
 describe('Dap', () => {

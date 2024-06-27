@@ -1,6 +1,6 @@
 {
   "name": "@tbd54566975/dap",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "TypeScript SDK for DAPs",
   "module": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -32,8 +32,7 @@
     "paytags"
   ],
   "publishConfig": {
-    "access": "public",
-    "provenance": true
+    "access": "public"
   },
   "engines": {
     "node": ">=20.0.0"
@@ -42,6 +41,12 @@
     "dist",
     "src"
   ],
+  "dependencies": {
+    "@web5/common": "1.0.1",
+    "@web5/crypto": "1.0.1",
+    "@web5/dids": "1.1.1",
+    "typeid-js": "0.7.0"
+  },
   "devDependencies": {
     "@tsconfig/bun": "1.0.6",
     "@types/bun": "latest",
